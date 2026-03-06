@@ -1,0 +1,80 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections stack properly */
+main {
+  position: relative;
+}
+
+/* Phone mockup breathing animation */
+@keyframes phone-breathe {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Custom cursor for interactive elements */
+button,
+a {
+  cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #B6FF2E;
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on UI elements */
+nav,
+button {
+  user-select: none;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input {
+  transition: all 0.3s ease;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  .section-pinned {
+    min-height: 100svh;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
