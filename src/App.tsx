@@ -6,6 +6,7 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Hero from './sections/Hero';
 import Features from './sections/Features';
+import UseCases from './sections/UseCases';
 import ChatDemo from './sections/ChatDemo';
 import HowItWorks from './sections/HowItWorks';
 import Security from './sections/Security';
@@ -81,6 +82,7 @@ function App() {
       <main className="relative">
         <Hero />
         <Features />
+        <UseCases />
         <ChatDemo />
         <HowItWorks />
         <Security />
