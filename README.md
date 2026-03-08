@@ -120,3 +120,4 @@ The project includes a demo chatbot within src/sections/ChatDemo.tsx that simula
 - State updates use functional `setMessages` calls to avoid stale closures.
 
 <!-- Trigger Vercel deployment -->
+\n<!-- trigger vercel deployment -->
