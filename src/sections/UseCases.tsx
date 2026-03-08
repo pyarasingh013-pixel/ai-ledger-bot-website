@@ -20,16 +20,6 @@ const useCases = [
       '💳 Send UPI payment links instantly',
       '👥 Multiple roommates, clear accountability',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'Priya, Rohit, and Neha share a flat. Every month they need to split rent (₹30K), electricity (₹2K), and groceries (₹5K). Previously, they used a calculator and spreadsheet. Now?',
-      steps: [
-        'Priya sends: "/start ledger 30000 2026-04-08 +919876543210 Rent March"',
-        'Rohit scans a grocery bill → Bot extracts ₹4,850 → Splits into 3',
-        'Monthly: Bot sends reminders "Neha owes Priya ₹10,617 by April 8"',
-        'Click UPI link → Payment done. Ledger auto-updates.',
-      ],
-    },
   },
   {
     id: 2,
@@ -45,17 +35,6 @@ const useCases = [
       '📊 See who-owes-who at a glance',
       '💰 Settle instantly with payment links',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'Amit books flights for 4 friends to Goa (₹2,40,000 total). Hotel is ₹60K. Meals and activities add up. Who owes what?',
-      steps: [
-        'Amit creates: "/start ledger 240000 2026-05-01 +919988776655 Goa Flight"',
-        'Hotel bill scanned → ₹60K split 4 ways → ₹15K each',
-        'Meals added daily via photos or text → Automatic categorization',
-        'After trip: "Raj owes Amit ₹72,450 | Neha owes ₹68,900"',
-        'Everyone pays via UPI → Done in minutes',
-      ],
-    },
   },
   {
     id: 3,
@@ -71,17 +50,6 @@ const useCases = [
       '📱 Everything on WhatsApp—no app fatigue',
       '💡 Weekly insights on where money goes',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: "The Sharmas manage household expenses: groceries, children's tuition, utilities. Dad wants visibility without complicated apps.",
-      steps: [
-        'Mom sends: "Groceries ₹3,200" + photo → Logged instantly',
-        'Dad adds: "Kids tuition due March 31 - ₹50,000"',
-        'Bot reminds: "Tuition deadline in 5 days | Budget used 65% this month"',
-        'Kids can view shared ledger → Learn budgeting naturally',
-        'Export monthly report → Share with spouse anytime',
-      ],
-    },
   },
   {
     id: 4,
@@ -97,17 +65,6 @@ const useCases = [
       '📊 Export reports for accounting',
       '⚙️ Category expenses automatically',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'Aisha runs a design studio. Her team needs to track client project expenses—stock photos, software licenses, contractor payments.',
-      steps: [
-        'Team member scans: Adobe subscription ₹2,500 → Logs to "Project X"',
-        'Contractor invoice: ₹15,000 → Added to shared ledger',
-        'Aisha (editor) reviews and approves expenses',
-        'Interns (viewers) see breakdowns—learn cost management',
-        'Export & Invoice Client: "Project X expenses: ₹45,300"',
-      ],
-    },
   },
   {
     id: 5,
@@ -123,17 +80,6 @@ const useCases = [
       '🤝 Settle up with co-organizers via UPI',
       '📱 Everyone stays in sync on WhatsApp',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'Priya and Rohan are organizing a wedding. Decor, catering, invitations—expenses everywhere, multiple vendors.',
-      steps: [
-        'Priya pays: Decor ₹2,00,000 → Logs via photo',
-        'Rohan pays: Catering ₹3,00,000 → Scans invoice',
-        'Manager pays: Music + Photos ₹80,000 → Added',
-        'Total: ₹5,80,000 split 3 ways',
-        'Bot calculates: "Rohan owes Priya ₹86,667 | Manager owes ₹46,667"',
-      ],
-    },
   },
   {
     id: 6,
@@ -149,17 +95,6 @@ const useCases = [
       '🎁 Gift pool contributions',
       '💬 Friendly reminders—no awkward asks',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: '5 friends go out for drinks. One person picks up the ₹3,500 bill. Everyone owes back, but it gets messy.',
-      steps: [
-        'Anil scans the bill → ₹3,500 automatically split 5 ways',
-        'Bot: "Vikas owes Anil ₹700 | Sana owes ₹700 | ..."',
-        'Weekly: Auto-reminder—"You owe Anil ₹700 | Pay now"',
-        'Click UPI link → Settled in seconds',
-        'Next time? Vikas picks up → New ledger auto-created',
-      ],
-    },
   },
   {
     id: 7,
@@ -175,49 +110,37 @@ const useCases = [
       '💳 Send UPI payments directly from WhatsApp',
       '📈 Reduce late payment penalties',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'A retail store owner manages 15+ vendors—packaging suppliers, delivery partners, raw material providers. Manual tracking leads to missed payments and strained relationships.',
-      steps: [
-        'Vendor sends invoice → Owner scans → ₹45,000 logged automatically',
-        'Bot reminds: "Packaging Corp payment due in 3 days"',
-        'Owner reviews all pending: "Total due this week: ₹2,15,000"',
-        'Click UPI link → Pay instantly → Relationship maintained',
-        'Monthly report: "Saved ₹12,000 in late fees vs last year"',
-      ],
-    },
   },
   {
-    id: 1,
-    title: 'Roommate Sharing',
-    subtitle: 'Split rent, utilities & groceries effortlessly',
-    icon: Home,
-    color: 'from-lime/20 to-lime/5',
-    accentColor: 'text-lime',
+    id: 8,
+    title: 'Client Collections',
+    subtitle: 'Professional invoicing & payment tracking',
+    icon: Receipt,
+    color: 'from-cyan-500/20 to-cyan-500/5',
+    accentColor: 'text-cyan-400',
     features: [
-      '🏠 Create shared ledgers for rent & bills',
-      '📸 Scan grocery receipts and split automatically',
-      '⏰ Get reminders who owes what, when',
-      '💳 Send UPI payment links instantly',
-      '👥 Multiple roommates, clear accountability',
+      '📄 Generate professional invoices instantly',
+      '📅 Automated payment reminders to clients',
+      '💰 Track outstanding receivables',
+      '📊 Cash flow visibility in real-time',
+      '⚡ Faster collections, better cash flow',
     ],
   },
   {
-    id: 2,
-    title: 'Group Travel',
-    subtitle: 'Settle trip expenses without the headache',
-    icon: Plane,
-    color: 'from-purple-500/20 to-purple-500/5',
-    accentColor: 'text-purple-400',
+    id: 9,
+    title: 'Expense Reimbursements',
+    subtitle: 'Employee expenses made simple & accountable',
+    icon: Calculator,
+    color: 'from-emerald-500/20 to-emerald-500/5',
+    accentColor: 'text-emerald-400',
     features: [
-      '✈️ One person pays, others contribute later',
-      '📸 Scan every bill—flights, hotels, meals',
-      '🫮 Automatic split among travelers',
-      '📊 See who-owes-who at a glance',
-      '💰 Settle instantly with payment links',
+      '👥 Employees submit expenses via WhatsApp',
+      '✅ Manager approval workflow',
+      '💸 Automatic reimbursement calculations',
+      '📋 Audit trail for all expenses',
+      '⏱️ Cut processing time from days to minutes',
     ],
   },
-  ...existing code...
   {
     id: 10,
     title: 'Multi-Location Operations',
@@ -232,17 +155,6 @@ const useCases = [
       '🎯 Identify cost-saving opportunities',
       '📱 Real-time updates from any location',
     ],
-    scenario: {
-      title: 'The Scenario',
-      desc: 'A restaurant chain with 4 outlets. Owners need visibility into daily expenses but hate complicated ERPs. Branch managers want autonomy.',
-      steps: [
-        'Delhi outlet: "Daily supplies ₹12,500" + receipt photo',
-        'Mumbai outlet: "Staff salaries ₹85,000" logged automatically',
-        'Owner checks: "Total daily expenses: ₹1,42,000 | Delhi highest at ₹45K"',
-        'Bot alerts: "Mumbai expenses 15% over budget this week"',
-        'Monthly: "Cost per outlet | Delhi: ₹12.5L | Mumbai: ₹11.2L"',
-      ],
-    },
   },
 ];
 
@@ -356,7 +268,7 @@ export default function UseCases() {
                   </div>
 
                   {/* Features List */}
-                  <div className="mb-8 space-y-3">
+                  <div className="space-y-3">
                     {useCase.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-lime mt-1.5 flex-shrink-0" />
@@ -365,30 +277,6 @@ export default function UseCases() {
                         </p>
                       </div>
                     ))}
-                  </div>
-
-                  {/* Scenario Section */}
-                  <div className="bg-white/2 rounded-xl p-5 border border-white/3">
-                    <h4 className="text-sm font-semibold text-gray-primary mb-2">
-                      {useCase.scenario.title}
-                    </h4>
-                    <p className="text-xs text-gray-secondary mb-4 leading-relaxed">
-                      {useCase.scenario.desc}
-                    </p>
-
-                    {/* Steps */}
-                    <div className="space-y-2">
-                      {useCase.scenario.steps.map((step, idx) => (
-                        <div key={idx} className="flex gap-3 text-xs">
-                          <span className="text-lime font-bold flex-shrink-0 w-5">
-                            {idx + 1}.
-                          </span>
-                          <p className="text-gray-secondary leading-relaxed">
-                            {step}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
