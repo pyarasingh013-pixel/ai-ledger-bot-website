@@ -168,7 +168,7 @@ export default function Features() {
           </h2>
 
           {/* Phone */}
-          <div className="feature-phone absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2">
+          <div className="feature-phone absolute right-[8vw] top-[56%] -translate-y-1/2 scale-90 origin-center">
             <PhoneMockup>
               {/* WhatsApp Header */}
               <div className="bg-dark-lighter px-4 py-3 flex items-center gap-3 border-b border-white/5">
@@ -242,7 +242,7 @@ export default function Features() {
             merchant—instantly.
           </p>
 
-          <p className="right-caption absolute right-[7vw] top-[78vh] w-[28vw] max-w-sm text-gray-secondary leading-relaxed text-right">
+          <p className="right-caption absolute left-[7vw] top-[84vh] w-[30vw] max-w-md text-gray-secondary leading-relaxed text-left">
             No typing. No folders. Just send it like a message.
           </p>
         </div>
@@ -287,7 +287,7 @@ export default function Features() {
           </div>
 
           {/* Phone */}
-          <div className="feature-phone absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2">
+          <div className="feature-phone absolute right-[8vw] top-[56%] -translate-y-1/2 scale-90 origin-center">
             <PhoneMockup>
               {/* WhatsApp Header */}
               <div className="bg-dark-lighter px-4 py-3 flex items-center gap-3 border-b border-white/5">
@@ -336,7 +336,7 @@ export default function Features() {
             Smart categories that learn your habits. Rename anytime.
           </p>
 
-          <p className="right-caption absolute right-[7vw] top-[78vh] w-[28vw] max-w-sm text-gray-secondary leading-relaxed text-right">
+          <p className="right-caption absolute left-[7vw] top-[84vh] w-[30vw] max-w-md text-gray-secondary leading-relaxed text-left">
             Split shared ledgers. Tag who paid. Keep it fair.
           </p>
         </div>
@@ -363,7 +363,7 @@ export default function Features() {
           </h2>
 
           {/* Phone */}
-          <div className="feature-phone absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2">
+          <div className="feature-phone absolute right-[8vw] top-[56%] -translate-y-1/2 scale-90 origin-center">
             <PhoneMockup>
               {/* WhatsApp Header */}
               <div className="bg-dark-lighter px-4 py-3 flex items-center gap-3 border-b border-white/5">
@@ -442,7 +442,7 @@ export default function Features() {
             Weekly summaries in plain text. No spreadsheets.
           </p>
 
-          <p className="right-caption absolute right-[7vw] top-[78vh] w-[28vw] max-w-sm text-gray-secondary leading-relaxed text-right">
+          <p className="right-caption absolute left-[7vw] top-[84vh] w-[30vw] max-w-md text-gray-secondary leading-relaxed text-left">
             Spot trends, cut waste, stay on budget—without leaving the chat.
           </p>
         </div>
