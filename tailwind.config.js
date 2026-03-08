@@ -40,9 +40,9 @@ module.exports = {
         },
         // Custom colors for AI Ledger Bot
         lime: {
-          DEFAULT: "#B6FF2E",
-          dark: "#9ED920",
-          light: "#C8FF5C",
+          DEFAULT: "#9ACD32",
+          dark: "#7CB342",
+          light: "#A8DADC",
         },
         dark: {
           DEFAULT: "#0B0B0D",
