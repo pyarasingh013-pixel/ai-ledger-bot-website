@@ -73,7 +73,7 @@ const useCases = [
     ],
     scenario: {
       title: 'The Scenario',
-      desc: 'The Sharmas manage household expenses: groceries, kids' tuition, utilities. Dad wants visibility without complicated apps.',
+      desc: "The Sharmas manage household expenses: groceries, children's tuition, utilities. Dad wants visibility without complicated apps.",
       steps: [
         'Mom sends: "Groceries ₹3,200" + photo → Logged instantly',
         'Dad adds: "Kids tuition due March 31 - ₹50,000"',
