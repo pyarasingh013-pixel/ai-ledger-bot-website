@@ -1,22 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* Image alignment and section spacing */
 .section-spacing {
   margin-top: 32px;
   margin-bottom: 32px;
 }
-img, .image, .phone-mockup img {
+
+img,
+.image,
+.phone-mockup img {
   cursor: default !important;
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0 0 12px 0;
   max-width: 100%;
   height: auto;
+  display: block;
 }
-/* Ensure images never change cursor */
-img, .image, .phone-mockup img {
-  cursor: default !important;
-}
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

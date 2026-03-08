@@ -207,10 +207,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Center Phone */}
+        {/* Right Phone */}
         <div
           ref={phoneRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute right-[9vw] top-1/2 -translate-y-1/2"
         >
           <PhoneMockup className="animate-float">
             {/* WhatsApp Header */}
