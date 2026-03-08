@@ -321,6 +321,7 @@ export default function UseCases() {
   return (
     <section
       ref={sectionRef}
+      id="usecases"
       className="relative bg-dark py-24 lg:py-32 z-40"
     >
       {/* Background Gradient */}

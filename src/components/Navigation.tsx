@@ -55,6 +55,12 @@ export default function Navigation() {
               >
                 Features
               </button>
+                <button
+                  onClick={() => scrollToSection('usecases')}
+                  className="nav-link hover:text-lime"
+                >
+                  Use Cases
+                </button>
               <button
                 onClick={() => scrollToSection('demo')}
                 className="nav-link"
@@ -111,6 +117,12 @@ export default function Navigation() {
           >
             Features
           </button>
+            <button
+              onClick={() => scrollToSection('usecases')}
+              className="text-2xl font-display font-semibold text-gray-primary hover:text-lime transition-colors"
+            >
+              Use Cases
+            </button>
           <button
             onClick={() => scrollToSection('demo')}
             className="text-2xl font-display font-semibold text-gray-primary hover:text-lime transition-colors"
