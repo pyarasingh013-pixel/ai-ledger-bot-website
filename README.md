@@ -118,3 +118,5 @@ The project includes a demo chatbot within src/sections/ChatDemo.tsx that simula
 ### Notes
 - The logic lives entirely in the frontend; no network or persistence is used in the demo.
 - State updates use functional `setMessages` calls to avoid stale closures.
+
+<!-- Trigger Vercel deployment -->
