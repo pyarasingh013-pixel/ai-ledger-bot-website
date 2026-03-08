@@ -44,7 +44,10 @@ img,
 }
 
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
     @apply border-border;
   }
   
@@ -99,7 +102,8 @@ img,
   }
   
   .btn-primary {
-    @apply bg-lime text-dark font-semibold px-6 py-3 rounded-xl transition-all duration-300;
+    @apply bg-lime text-dark font-semibold px-6 py-3 rounded-xl duration-300;
+    transition-property: transform, opacity, background-color, border-color, color;
   }
   
   .btn-primary:hover {
@@ -108,7 +112,8 @@ img,
   }
   
   .btn-outline {
-    @apply border border-lime/50 text-lime font-semibold px-6 py-3 rounded-xl transition-all duration-300;
+    @apply border border-lime/50 text-lime font-semibold px-6 py-3 rounded-xl duration-300;
+    transition-property: transform, opacity, background-color, border-color, color;
   }
   
   .btn-outline:hover {
@@ -132,7 +137,8 @@ img,
   }
   
   .nav-link {
-    @apply text-gray-secondary hover:text-gray-primary transition-colors duration-300 text-sm font-medium;
+    @apply text-gray-secondary hover:text-gray-primary duration-300 text-sm font-medium;
+    transition-property: color, opacity;
   }
   
   .step-number {
@@ -140,7 +146,8 @@ img,
   }
   
   .price-card {
-    @apply bg-dark-light rounded-2xl border border-white/5 p-8 transition-all duration-300;
+    @apply bg-dark-light rounded-2xl border border-white/5 p-8 duration-300;
+    transition-property: transform, opacity, background-color, border-color;
   }
   
   .price-card:hover {
@@ -150,6 +157,100 @@ img,
   
   .price-card-pro {
     @apply border-t-2 border-t-lime;
+  }
+}
+
+.feature-headline,
+.feature-phone,
+.left-caption,
+.right-caption,
+.hero-text,
+.hero-phone,
+.hero-cards,
+.feature-card {
+  will-change: transform, opacity;
+}
+
+@media (max-width: 1200px) {
+  .hero-phone {
+    right: 5vw !important;
+    transform: translateY(-50%) scale(0.82) !important;
+  }
+
+  .hero-cards {
+    right: 2vw !important;
+  }
+
+  .hero-text {
+    width: 48vw !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-pinned {
+    width: 100%;
+    min-height: 100svh;
+    height: auto;
+    overflow: visible;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-layout,
+  .feature-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    height: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .hero-text,
+  .hero-phone,
+  .hero-cards,
+  .feature-headline,
+  .feature-phone,
+  .left-caption,
+  .right-caption,
+  .category-chip {
+    position: static !important;
+    transform: none !important;
+    inset: auto !important;
+  }
+
+  .hero-text,
+  .left-caption,
+  .right-caption {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  .hero-phone,
+  .feature-phone {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .hero-cards {
+    display: grid !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-cards .feature-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .category-chip {
+    display: inline-flex;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 

@@ -151,9 +151,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative w-full h-full flex items-center">
+      <div className="hero-layout relative w-full h-full flex items-center">
         {/* Left Content */}
-        <div className="absolute left-[7vw] top-[18vh] w-[42vw] max-w-xl">
+        <div className="hero-text absolute left-[7vw] top-[18vh] w-[42vw] max-w-xl">
           {/* Headline */}
           <div ref={headlineRef} className="mb-8">
             <h1 className="font-display font-bold text-[clamp(44px,5.2vw,84px)] leading-[0.95] tracking-[-0.03em] text-gray-primary">
@@ -210,7 +210,7 @@ export default function Hero() {
         {/* Right Phone */}
         <div
           ref={phoneRef}
-          className="absolute right-[12vw] top-1/2 -translate-y-1/2 scale-90 origin-center"
+          className="hero-phone absolute right-[12vw] top-1/2 -translate-y-1/2 scale-90 origin-center"
         >
           <PhoneMockup className="animate-float">
             {/* WhatsApp Header */}
@@ -299,7 +299,7 @@ export default function Hero() {
         {/* Right Floating Cards */}
         <div
           ref={cardsRef}
-          className="absolute right-[4vw] top-1/2 -translate-y-1/2 flex flex-col items-center gap-3"
+          className="hero-cards absolute right-[4vw] top-1/2 -translate-y-1/2 flex flex-col items-center gap-3"
         >
           <div className="feature-card relative w-[14vw] min-w-[170px] animate-float-x">
             <div className="absolute top-0 left-0 w-12 h-0.5 bg-lime" />

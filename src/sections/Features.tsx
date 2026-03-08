@@ -161,7 +161,7 @@ export default function Features() {
           }}
         />
 
-        <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <div className="feature-stage relative w-full h-full flex flex-col items-center justify-center">
           {/* Headline */}
           <h2 className="feature-headline font-display font-bold text-[clamp(34px,3.6vw,56px)] text-gray-primary text-center absolute top-[10vh] left-1/2 -translate-x-1/2 w-[70vw]">
             Point. Shoot. <span className="text-lime glow-text">Logged.</span>
@@ -253,7 +253,7 @@ export default function Features() {
         ref={section2Ref}
         className="section-pinned bg-dark flex items-center justify-center z-30"
       >
-        <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <div className="feature-stage relative w-full h-full flex flex-col items-center justify-center">
           {/* Headline */}
           <h2 className="feature-headline font-display font-bold text-[clamp(34px,3.6vw,56px)] text-gray-primary text-center absolute top-[10vh] left-1/2 -translate-x-1/2 w-[70vw]">
             It knows where it <span className="text-lime glow-text">goes.</span>
@@ -356,7 +356,7 @@ export default function Features() {
           }}
         />
 
-        <div className="relative w-full h-full flex flex-col items-center justify-center">
+        <div className="feature-stage relative w-full h-full flex flex-col items-center justify-center">
           {/* Headline */}
           <h2 className="feature-headline font-display font-bold text-[clamp(34px,3.6vw,56px)] text-gray-primary text-center absolute top-[10vh] left-1/2 -translate-x-1/2 w-[70vw]">
             See the <span className="text-lime glow-text">story.</span>
