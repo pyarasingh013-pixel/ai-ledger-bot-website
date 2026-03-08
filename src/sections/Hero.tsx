@@ -210,7 +210,7 @@ export default function Hero() {
         {/* Right Phone */}
         <div
           ref={phoneRef}
-          className="absolute right-[9vw] top-1/2 -translate-y-1/2"
+          className="absolute right-[12vw] top-1/2 -translate-y-1/2 scale-90 origin-center"
         >
           <PhoneMockup className="animate-float">
             {/* WhatsApp Header */}
@@ -299,9 +299,9 @@ export default function Hero() {
         {/* Right Floating Cards */}
         <div
           ref={cardsRef}
-          className="absolute right-[7vw] top-[15vh] flex flex-col gap-4"
+          className="absolute right-[4vw] top-1/2 -translate-y-1/2 flex flex-col items-center gap-3"
         >
-          <div className="feature-card relative w-[18vw] min-w-[200px] animate-float-x">
+          <div className="feature-card relative w-[14vw] min-w-[170px] animate-float-x">
             <div className="absolute top-0 left-0 w-12 h-0.5 bg-lime" />
             <Scan size={24} className="text-lime mb-3" />
             <h3 className="font-display font-semibold text-gray-primary mb-1">
@@ -312,9 +312,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div
-            className="feature-card relative w-[16vw] min-w-[180px] ml-8 animate-float-x animation-delay-200"
-          >
+          <div className="feature-card relative w-[13vw] min-w-[160px] animate-float-x animation-delay-200">
             <div className="absolute top-0 left-0 w-12 h-0.5 bg-lime" />
             <Tags size={24} className="text-lime mb-3" />
             <h3 className="font-display font-semibold text-gray-primary mb-1">
@@ -325,9 +323,7 @@ export default function Hero() {
             </p>
           </div>
 
-          <div
-            className="feature-card relative w-[20vw] min-w-[220px] -ml-4 animate-float-x animation-delay-400"
-          >
+          <div className="feature-card relative w-[15vw] min-w-[180px] animate-float-x animation-delay-400">
             <div className="absolute top-0 left-0 w-12 h-0.5 bg-lime" />
             <TrendingUp size={24} className="text-lime mb-3" />
             <h3 className="font-display font-semibold text-gray-primary mb-1">
