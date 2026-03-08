@@ -162,12 +162,12 @@ export default function Hero() {
                 One <span className="text-lime glow-text">chat</span> away.
               </span>
             </h1>
+            <p className="text-sm text-gray-secondary mt-2 italic">Free WhatsApp Expense Tracker with AI Receipt Scanning</p>
           </div>
 
           {/* Subheadline */}
           <p className="text-lg lg:text-xl text-gray-secondary leading-relaxed mb-8 max-w-md">
-            Track expenses, split bills, and stay on budget—inside WhatsApp. No
-            apps to install.
+            Smart expense tracking on WhatsApp. Scan receipts with AI OCR, auto-categorize spending, split bills with friends, and get weekly financial insights—no app download needed.
           </p>
 
           {/* CTA Buttons */}

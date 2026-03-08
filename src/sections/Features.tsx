@@ -189,7 +189,7 @@ export default function Features() {
                   <div className="relative">
                     <img
                       src="/images/receipt_coffee.jpg"
-                      alt="Receipt"
+                      alt="Coffee receipt scanned by AI Ledger Bot OCR"
                       className="w-full h-32 object-cover rounded-lg"
                     />
                     <div className="absolute bottom-2 right-2 bg-lime text-dark text-xs font-semibold px-2 py-1 rounded-full">
