@@ -80,15 +80,15 @@ function App() {
 
       {/* Main Content */}
       <main className="relative">
-        <Hero />
-        <Features />
-        <UseCases />
-        <ChatDemo />
-        <HowItWorks />
-        <Security />
-        <Pricing />
-        <FAQ />
-        <CTAFooter />
+        <div className="section-spacing"><Hero /></div>
+        <div className="section-spacing"><Features /></div>
+        <div className="section-spacing"><UseCases /></div>
+        <div className="section-spacing"><ChatDemo /></div>
+        <div className="section-spacing"><HowItWorks /></div>
+        <div className="section-spacing"><Security /></div>
+        <div className="section-spacing"><Pricing /></div>
+        <div className="section-spacing"><FAQ /></div>
+        <div className="section-spacing"><CTAFooter /></div>
       </main>
     </div>
   );
