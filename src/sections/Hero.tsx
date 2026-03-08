@@ -74,9 +74,9 @@ export default function Hero() {
         scrollTrigger: {
           trigger: section,
           start: 'top top',
-          end: '+=130%',
+          end: '+=100%',
           pin: true,
-          scrub: 0.6,
+          scrub: 1.5,
           onLeaveBack: () => {
             // Reset all elements when scrolling back to top
             gsap.set([headline.querySelectorAll('.headline-line'), phone, cards.querySelectorAll('.feature-card'), cta, bullets.querySelectorAll('.bullet-item')], {
@@ -89,41 +89,41 @@ export default function Hero() {
         },
       });
 
-      // SETTLE phase (0% - 70%): Hold position
-      // EXIT phase (70% - 100%)
+      // SETTLE phase (0% - 60%): Hold position
+      // EXIT phase (60% - 100%)
       scrollTl.fromTo(
         headline,
         { x: 0, opacity: 1 },
         { x: '-18vw', opacity: 0, ease: 'power2.in' },
-        0.7
+        0.6
       );
 
       scrollTl.fromTo(
         phone,
         { y: 0, scale: 1, opacity: 1 },
         { y: '-10vh', scale: 0.96, opacity: 0, ease: 'power2.in' },
-        0.7
+        0.6
       );
 
       scrollTl.fromTo(
         cards.querySelectorAll('.feature-card'),
         { x: 0, opacity: 1 },
         { x: '12vw', opacity: 0, stagger: 0.05, ease: 'power2.in' },
-        0.7
+        0.6
       );
 
       scrollTl.fromTo(
         cta,
         { y: 0, opacity: 1 },
         { y: 20, opacity: 0, ease: 'power2.in' },
-        0.75
+        0.65
       );
 
       scrollTl.fromTo(
         bullets,
         { y: 0, opacity: 1 },
         { y: 20, opacity: 0, ease: 'power2.in' },
-        0.75
+        0.65
       );
     }, section);
 
