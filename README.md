@@ -1,125 +1,113 @@
-# React + TypeScript + Vite
+# AI Ledger Bot — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing website for AI Ledger Bot, built with React + TypeScript + Vite + Tailwind + GSAP ScrollTrigger.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS
+- GSAP (`ScrollTrigger`) for pinned/scroll animations
+- Lucide icons
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/App.tsx` — page composition + global snap behavior
+- `src/components/Navigation.tsx` — sticky top navigation + section scrolling
+- `src/components/PhoneMockup.tsx` — reusable phone frame UI
+- `src/components/ChatBubble.tsx` — reusable chat bubble UI
+- `src/sections/` — homepage sections:
+  - `Hero.tsx`
+  - `Features.tsx`
+  - `UseCases.tsx`
+  - `ChatDemo.tsx`
+  - `HowItWorks.tsx`
+  - `Security.tsx`
+  - `Pricing.tsx`
+  - `FAQ.tsx`
+  - `CTAFooter.tsx`
+- `src/index.css` — global design tokens, utilities, responsive layout tuning
 
-## Expanding the ESLint configuration
+## Current UX Notes (Latest)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Sticky header remains visible while navigating sections.
+- Hero and Features visuals are aligned to the right with content text aligned left.
+- Responsive safeguards were added for overlap issues in pinned sections.
+- Transitions were tuned toward `transform`/`opacity` based animation patterns.
+- Use Cases section displays concise cards (title, subtitle, features) without scenario blocks.
+- Chat Demo includes an interactive simulated chat experience with quick commands.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Production Build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
 
-## Chatbot Implementation Details
+## Deployment
 
-The project includes a demo chatbot within src/sections/ChatDemo.tsx that simulates an AI ledger bot. This section provides a code-level breakdown for engineers to understand and extend the behavior.
+- Production deploys are handled via Vercel from the `master` branch.
 
-### Core Concepts
+## Notes for Contributors
 
-1. **State Management**
-   - `messages`: array of `{ id, text, isUser, timestamp }` representing chat history.
-   - `inputValue`: controlled input for user message.
-   - `isTyping`: boolean used to show a typing indicator.
+- Keep section IDs stable (`features`, `usecases`, `demo`, `pricing`, `faq`) so navbar anchors continue to work.
+- Prefer responsive layout fixes via CSS breakpoints and class hooks over one-off inline style overrides.
+- When adjusting animations, avoid layout-triggering properties (`top`, `left`, `width`, `height`) for smoother rendering.
 
-2. **Initial Data & Responses**
-   - `initialMessages` seeds the conversation with welcome text and usage hints.
-   - `botResponses`: simple keyword-to-response map. The `handleSend` function checks the user's input against these keys to determine bot output.
+## `index.css` Breakdown (Current)
 
-3. **Message Lifecycle**
-   - `handleSend`:
-     * Validates non-empty input, appends a user message to `messages`.
-     * Clears the input and sets `isTyping` to `true`.
-     * After a 1.5second timeout, chooses a response (default fallback if no keyword match) and appends a bot message.
-     * Resets `isTyping` to `false`.
-   - `handleKeyPress` submits on `Enter`.
-   - `quickCommands` provide buttons for common commands to prefill the input.
+The stylesheet is organized into logical layers and utility sections:
 
-4. **UI & Animation**
-   - Message list scrolls to bottom whenever `messages` updates using `scrollToBottom` and a `ref`.
-   - GSAP animations (via `gsap/ScrollTrigger`) animate the left column and phone mockup when the section scrolls into view.
-   - `PhoneMockup` component contains `ChatBubble` child components rendering individual messages with different styles for user vs bot.
+1. **Imports + Global Image Rules**
+  - Imports Google fonts used by the design system.
+  - Normalizes image behavior (`max-width: 100%`, `display: block`, `cursor: default`) to avoid layout shifts and hover cursor mismatch.
 
-5. **Extensibility**
-   - To support real AI or backend integration, replace the local `setTimeout` block with an async call to a service (e.g. OpenAI or custom API). Keep the message structure and typing indicator logic for seamless UX.
-   - Additional commands can be added by extending `botResponses` or implementing more advanced parsing/NER.
+2. **Tailwind Layers**
+  - `@tailwind base/components/utilities` are the foundation.
+  - `@layer base` defines theme tokens (`--background`, `--card`, etc.) and base selectors.
 
-6. **Related Files**
-   - `src/components/ChatBubble.tsx` handles rendering a single message bubble.
-   - `src/components/PhoneMockup.tsx` lays out the faux mobile UI.
+3. **Base Resets + Box Model**
+  - Global `box-sizing: border-box` is applied on `*`, `*::before`, `*::after`.
+  - This prevents padding/border from unexpectedly increasing element width and causing alignment drift.
 
-### Example flow
-1. User types "Coffee 250" and presses Enter.
-2. `handleSend` appends user message, triggers typing state.
-3. After delay, lookups `coffee` keyword, finds response text.
-4. Bot message is appended; chat scrolls to bottom automatically.
+4. **Component-Level Styling (`@layer components`)**
+  - Reusable classes like:
+    - `.phone-mockup`
+    - `.chat-bubble-left` / `.chat-bubble-right`
+    - `.feature-card`
+    - `.btn-primary` / `.btn-outline`
+    - `.section-pinned`
+    - `.grain-overlay`
+  - Transition performance was tuned by reducing broad `transition-all` usage and specifying transition properties.
 
-### Notes
-- The logic lives entirely in the frontend; no network or persistence is used in the demo.
-- State updates use functional `setMessages` calls to avoid stale closures.
+5. **Performance + Motion Helpers**
+  - `will-change: transform, opacity` is used on animated hero/feature elements.
+  - This improves perceived smoothness for GSAP-driven transitions.
 
-<!-- Trigger Vercel deployment -->
-\n<!-- trigger vercel deployment -->
+6. **Responsive Regression Guards**
+  - `@media (max-width: 1200px)`: scales and repositions hero visuals.
+  - `@media (max-width: 1024px)`: switches pinned layouts to safer vertical flow, neutralizes absolute positioning for key elements, and prevents overlap.
 
-<!-- deployment trigger -->
+7. **Utilities + Scrollbar Styling**
+  - Animation delay helpers (`.animation-delay-*`).
+  - Custom scrollbar styles + mobile scrollbar hide rule.
+
+## Latest CSS/Layout Changes We Made
+
+- Removed overlap-causing behavior by combining:
+  - global `box-sizing: border-box`
+  - responsive fallback for pinned/absolute layouts on tablet/mobile
+  - safer flow for hero/feature text + visual blocks.
+- Improved sticky navigation visibility by balancing z-index with overlay layers.
+- Updated transition strategy to favor `transform` and `opacity` where possible.
+- Kept text clean on the left and visual phone/image blocks on the right across hero/features.
+- Standardized image rendering behavior to avoid indentation/flow glitches.
+
+These updates were specifically made to address regression issues around **overlap**, **spacing consistency**, and **jerky motion during section transitions**.

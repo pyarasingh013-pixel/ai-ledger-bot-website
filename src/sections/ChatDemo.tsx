@@ -242,13 +242,16 @@ export default function ChatDemo() {
                 <div className="w-10 h-10 rounded-full bg-lime/20 flex items-center justify-center">
                   <Receipt size={20} className="text-lime" />
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-primary text-sm">
-                    AI Ledger Bot
-                  </p>
-                  <p className="text-xs text-lime">
-                    {isTyping ? 'typing...' : 'Online'}
-                  </p>
+                <div className="flex items-center gap-2">
+                  <div>
+                    <p className="font-semibold text-gray-primary text-sm">
+                      AI Ledger Bot
+                    </p>
+                    <p className="text-xs text-lime">
+                      {isTyping ? 'typing...' : 'Online'}
+                    </p>
+                  </div>
+                  <span className="ml-2 px-2 py-0.5 bg-lime text-dark text-[11px] font-bold rounded-full shadow-glow">LIVE</span>
                 </div>
               </div>
 

@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-/* Image alignment and section spacing */
-.section-spacing {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
+/* Image alignment */
 
 img,
 .image,
@@ -20,6 +16,7 @@ img,
 
 @layer base {
   :root {
+    color-scheme: dark;
     --background: 240 7% 4%;
     --foreground: 0 0% 96%;
     --card: 240 7% 7%;
@@ -53,6 +50,11 @@ img,
   
   html {
     scroll-behavior: smooth;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
   
   body {
@@ -160,15 +162,17 @@ img,
   }
 }
 
-.feature-headline,
-.feature-phone,
-.left-caption,
-.right-caption,
-.hero-text,
-.hero-phone,
-.hero-cards,
-.feature-card {
-  will-change: transform, opacity;
+@media (min-width: 1025px) {
+  .feature-headline,
+  .feature-phone,
+  .left-caption,
+  .right-caption,
+  .hero-text,
+  .hero-phone,
+  .hero-cards,
+  .feature-card {
+    will-change: transform, opacity;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -302,5 +306,30 @@ img,
 @media (max-width: 768px) {
   ::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .feature-headline,
+  .feature-phone,
+  .left-caption,
+  .right-caption,
+  .hero-text,
+  .hero-phone,
+  .hero-cards,
+  .feature-card {
+    will-change: auto;
   }
 }
